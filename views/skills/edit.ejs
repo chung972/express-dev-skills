@@ -12,7 +12,7 @@
     <form action="/skills/<%= skillId%>?_method=PUT" method="POST" autocomplete="off">
         <input type="text" name="skill" value="<%= skill.skill%>">
         <label>
-            <input type="checkbox" name="learned" <%= skill.learned ? "learned" : ""%> >
+            <input type="checkbox" name="learned" <%= skill.learned && 'checked' %> >
             Learned
             <!-- wrapping the input INSIDE of the label allows you to click the label itself to check the box -->
             <!-- note how we have TWO input tags. the first one (because order matters here when constructinga skill object),
