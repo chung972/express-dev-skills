@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Express Dev Skills</title>
+</head>
+<body>
+    <h1>Edit Skill</h1>
+    <form action="/skills/<%= skillId%>?_method=PUT" method="POST" autocomplete="off">
+        <input type="text" name="skill" value="<%= skill.skill%>">
+        <label>
+            <input type="checkbox" name="learned" <%= skill.learned ? "learned" : ""%> >
+            Learned
+            <!-- wrapping the input INSIDE of the label allows you to click the label itself to check the box -->
+            <!-- note how we have TWO input tags. the first one (because order matters here when constructinga skill object),
+            has the name="skill" -->
+        </label>
+        <button type="submit">Update Skill</button>
+    </form>
+</body>
+</html>
