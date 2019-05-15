@@ -10,7 +10,7 @@
 <body>
     <h1>Skill #<%= skillNum %></h1>
     <h3><%= skill.skill %></h3>
-    <h3>Learned: <%= skill.done ? 'Yes' : 'No' %></h3>
+    <h3>Learned: <%= skill.learned ? 'Yes' : 'No' %></h3>
     <a href="/skills/<%= skillNum -1%>/edit">EDIT</a>
     <br>
     <a href="/skills">List of Skills</a>
